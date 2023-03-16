@@ -12,7 +12,7 @@ let x
 let y
 let z
 
-x = Number("3.14")
+x = Number("pizza")
 y = String(3.14)
 z = Boolean("pizza")
 
