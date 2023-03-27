@@ -1,7 +1,7 @@
 // for loop = repeat some code a 
 //            certain amount of times
 
-for (let i = 10; i > 0; i -= 2) {
+for (let i = 10; i > 0; i -= 3) {
     console.log(i)
 }
 
