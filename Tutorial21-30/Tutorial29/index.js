@@ -19,3 +19,5 @@ Your total is $${total}`
 
 // console.log(text)
 document.getElementById("myLabel").innerHTML = text
+
+// 
