@@ -4,9 +4,9 @@ let count = 0
 let max = window.prompt("Count up to what #?")
 max = Number(max)
 
-const myTimer = setInterval(countUp, 100)
+const myTimer = setInterval(countUp, 100, max)
 
-function countUp(){
+function countUp(max){
     count+=1
     console.log(count)
     if (count >= max) {
