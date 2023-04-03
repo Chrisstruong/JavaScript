@@ -23,5 +23,8 @@ function move() {
             x += 5
             myDiv.style.left = x + "px"
             break;
+
+        default:
+            break;
     }
 }
