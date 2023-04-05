@@ -1,7 +1,7 @@
 const gameBoard = document.querySelector("#gameBoard")
 const ctx = gameBoard.getContext("2d")
-const scoreText = document.querySelector("#score")
-const resetBtn = document.querySelector("resetBtn")
+const scoreText = document.querySelector("#scoreText")
+const resetBtn = document.querySelector("#resetBtn")
 const gameWidth = gameBoard.width
 const gameHeight = gameBoard.height
 const boardBackground = "white"
@@ -86,7 +86,7 @@ function moveSnake() {
 function drawSnake() {
     ctx.fillStyle = snakeColor
     ctx.strokeStyle = snakeBorder
-    snake.forEach(snake => {
+    snake.forEach(snakePart => {
         ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize)
         ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize)
     })
@@ -104,19 +104,19 @@ function changeDirection(event) {
     const goingLeft = (xVelocity == -unitSize)
 
     switch (true) {
-        case (keyPressed = LEFT && !goingRight):
+        case (keyPressed == LEFT && !goingRight):
             xVelocity = -unitSize
             yVelocity = 0
             break
-        case (keyPressed = UP && !goingDown):
+        case (keyPressed == UP && !goingDown):
             xVelocity = 0
             yVelocity = -unitSize
             break
-        case (keyPressed = RIGHT && !goingLeft):
+        case (keyPressed == RIGHT && !goingLeft):
             xVelocity = unitSize
             yVelocity = 0
             break
-        case (keyPressed = DOWN && !goingUP):
+        case (keyPressed == DOWN && !goingUP):
             xVelocity = 0
             yVelocity = unitSize
             break
@@ -162,4 +162,5 @@ function resetGame() {
         { x: unitSize, y: 0 },
         { x: 0, y: 0, }
     ]
+    gameStart()
 }
