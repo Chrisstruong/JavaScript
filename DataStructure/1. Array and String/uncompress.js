@@ -21,7 +21,7 @@ const uncompress = (s) => {
   //   push element to the array always have constant time of time complexity
   //   n is the number of groups : ex"2c, 300a, 5f"
   //   M is the maximum number of each group: ex: "2, 300, 5"
-  // Time complexity: O(nM)
+  //   Time complexity: O(nM)
   //   Space complexity: O(nM)
   };
   
