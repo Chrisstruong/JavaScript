@@ -1,5 +1,11 @@
 const pairSum = (numbers, targetSum) => {
     // todo
+
+    
+
+    // Brute force (nested loop) solution
+    // Time: O(n^2)
+    // Space: O(1)
     const pair = []
     
     for (let i = 0; i < numbers.length; i++) {
@@ -16,3 +22,4 @@ const pairSum = (numbers, targetSum) => {
     pairSum,
   };
   
+
