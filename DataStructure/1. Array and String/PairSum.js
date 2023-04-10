@@ -1,7 +1,18 @@
 const pairSum = (numbers, targetSum) => {
     // todo
+    //Time: O(n)
+    //Space: O(n)
+   const previousNum = {}
+   for (let i = 0; i < numbers.length; i++){
+     const num = numbers[i]
+     const complement = targetSum - num
+     if (complement in previousNum){
+       return [i, previousNum[complement]]
+     }
+     previousNum[num] = i
+   }
 
-    
+
 
     // Brute force (nested loop) solution
     // Time: O(n^2)
