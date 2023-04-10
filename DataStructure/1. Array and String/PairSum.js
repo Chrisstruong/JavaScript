@@ -1,5 +1,6 @@
 const pairSum = (numbers, targetSum) => {
     // todo
+    // Hash map solution
     //Time: O(n)
     //Space: O(n)
    const previousNum = {}
