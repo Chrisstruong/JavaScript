@@ -1,9 +1,27 @@
 const intersection = (a, b) => {
     // todo
-    
-    
-    
-    
+    // todo
+    // n : the minLength, m: the maxLength
+    // Time: O(n+m)
+    //Using hash map
+    const items = new Set()
+
+    const result = []
+
+    for (let item of a) {
+        items.add(item)
+    }
+
+    for (let ele of b) {
+        if (items.has(ele)) {
+            result.push(ele)
+        }
+    }
+
+    return result
+
+
+
     //nested loop solution
     // // Time: O(n*m)
     // // Space: O(n)
@@ -22,9 +40,8 @@ const intersection = (a, b) => {
     //   }
     // }
     // return result.sort((a,b)=>a-b)
-  };
-  
-  module.exports = {
+};
+
+module.exports = {
     intersection,
-  };
-  
+};
