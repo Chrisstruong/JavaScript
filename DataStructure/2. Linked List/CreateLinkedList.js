@@ -4,10 +4,23 @@ class Node {
       this.next = null;
     }
   }
+  const createLinkedList = (values, i = 0) => {
+    if(i === values.length) return null
+    const head = new Node(values[i])
+    head.next = createLinkedList(values, i + 1)
+    return head
+  }; 
   
-  const createLinkedList = (values) => {
-    
-  };
+  // 0     1    2   3
+  //["h", "e", "y"]
+  // (h) -> (e) -> (y) ->null
+  
+  // const createLinkedList = (values) => {
+  //   if(values.length === 0) return null
+  //   const head = new Node(values[0])
+  //   head.next = createLinkedList(values.slice(1))
+  //   return head
+  // }; 
   
   // const createLinkedList = (values) => {
   //   // todo
