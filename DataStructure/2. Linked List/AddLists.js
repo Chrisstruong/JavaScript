@@ -38,6 +38,8 @@ class Node {
   // const addLists = (head1, head2, carry = 0) => {
   //   // todo
   //   // Recursive solution
+  //   Time: O(n)
+  //   Space: O(n)
   //   if (head1 === null && head2 === null && carry === 0) return null
   //   const val1 = head1 === null ? 0 : head1.val
   //   const val2 = head2 === null ? 0 : head2.val
