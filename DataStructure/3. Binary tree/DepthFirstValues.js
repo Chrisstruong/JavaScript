@@ -37,3 +37,7 @@ class Node {
     depthFirstValues,
   };
   
+
+  const a = 3
+  if (a) console.log(a) //advanced
+  // or if (a===3) console.log(a)
