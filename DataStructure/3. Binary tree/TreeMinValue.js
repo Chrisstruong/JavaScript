@@ -8,6 +8,10 @@
 
 const treeMinValue = (root) => {
     // todo
+    // Breath first code iterative
+    // n = # nodes
+    // Time: O(n)
+    // Space: O(n)
     const queue = [ root ]
     let min = Number.MAX_VALUE
     while (queue.length > 0) {
