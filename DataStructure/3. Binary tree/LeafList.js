@@ -35,7 +35,7 @@ const leafList = (root) => {
   //     if (current.right) stack.push(current.right)
   //     if (current.left) stack.push(current.left)
   //   }
-  //   return leaves
+  //   return leavess
   // };
   
   module.exports = {
