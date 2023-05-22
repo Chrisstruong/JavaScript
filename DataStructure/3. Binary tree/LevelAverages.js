@@ -13,12 +13,7 @@ class Node {
     // Space: O(n)
     const levels = []
     fillLevels(root, levels, 0)
-    const avgs = []
-    for (let level of levels) {
-      getAvg(level)
-      avgs.push(getAvg(level))
-    }
-    return avgs
+    return levels.map(getAvg)
   };
   
   const getAvg = (array) =>{
