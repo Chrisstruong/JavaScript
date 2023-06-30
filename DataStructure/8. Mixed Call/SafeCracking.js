@@ -1,16 +1,31 @@
-const topologicalOrder = (graph) => {
+const safeCracking = (hints) => {
     // todo
-    // n = # nodes
-    // e = # edges
-    // Time: O(n+e)
-    // Space: O(n)
+    // e = # hints
+    // Time: O(e)
+    // Space: O(e)
+    const graph = buildGraph(hints)
+    return topologicalOrder(graph)
+  };
+  
+  const buildGraph = (edges) => {
+    const graph = {}
+    
+    for (let edge of edges) {
+      const [ a, b ] = edge
+      if (!(a in graph)) graph[a] = []
+      if (!(b in graph)) graph[b] = []
+      graph[a].push(String(b))
+    }
+    
+    return graph
+  }
+  
+  const topologicalOrder = (graph) => {
     const numParents = {}
-    // for loop for nodes
     for (let node in graph) {
       numParents[node] = 0
     }
     
-    // for loop for edges
     for (let node in graph) {
       for (let child of graph[node]) {
         numParents[child] += 1
@@ -22,10 +37,10 @@ const topologicalOrder = (graph) => {
       if (numParents[node] === 0) ready.push(node)
     }
     
-    const order = []
+    let order = ''
     while (ready.length > 0) {
       const node = ready.pop()
-      order.push(node)
+      order += node
       for (let child of graph[node]) {
         numParents[child] -= 1
         if (numParents[child] === 0) ready.push(child)
@@ -33,9 +48,9 @@ const topologicalOrder = (graph) => {
     }
     
     return order
-  };
+  }
   
   module.exports = {
-    topologicalOrder,
+    safeCracking,
   };
   
