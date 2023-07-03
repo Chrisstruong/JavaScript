@@ -19,6 +19,7 @@ const tokenTransform = (s, tokens) => {
         const key = s.slice(i, j + 1)
         const value = tokens[key]
         const evaluatedValue = tokenTransform(value, tokens)
+        tokens[key] = evaluatedValue
         output.push(evaluatedValue)
         i = j + 1
         j = i + 1
