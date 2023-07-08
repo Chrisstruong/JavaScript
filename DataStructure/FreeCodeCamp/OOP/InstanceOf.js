@@ -4,6 +4,6 @@ function House(numBedrooms) {
   
   const myHouse = new House(10)
   
-  myHouse instanceof House
+  console.log(myHouse instanceof House)
   
   // Only change code below this line
