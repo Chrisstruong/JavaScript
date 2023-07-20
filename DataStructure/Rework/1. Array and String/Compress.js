@@ -1,24 +1,24 @@
 const compress = (s) => {
     // todo
+    // Complexity
+    // n = string length
+    // Time: O(n)
+    // Space: O(n)  
     const result = []
     let i = 0
     let j = 0
-    
     while (j <= s.length) {
-      if (s[i] === s[j]){
+      console.log(s[j])
+      if (s[i] === s[j]) {
         j += 1
       } else {
-       const num = j - i
-        if (num === 1) {
-          result.push(s[i])
-        } else {
-          result.push(String(num), s[i])
-        }
+        const num = j - i
+        num === 1 ? result.push(s[i]) : result.push(num, s[i])
         i = j
       }
     }
-    
     return result.join('')
+  
     
     
     
