@@ -16,13 +16,11 @@ const mostFrequentChar = (s) => {
       count[char] += 1
     }
     
-    for (let char in count){
-      if (count[char] > max) {
-        max = count[char]
-        maxRepeatedChar = char
-      }
+    let best = null
+    for (let char of s) {
+      if (best === null || count[char] > count[best]) best = char
     }
-    return maxRepeatedChar
+    return best
   
   
   };
