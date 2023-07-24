@@ -2,7 +2,7 @@ const intersection = (a, b) => {
     // todo
     // n : the minLength, m: the maxLength
     // Time: O(n+m)
-    //Using hash map
+    // Using hash set
     const result = []
     const setA = new Set(a)
     for (let num of b){
