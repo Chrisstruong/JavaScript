@@ -15,8 +15,8 @@ a.next = b
 b.next = c
 c.next = d
 
-// A -> B -> C -> D -> NULL
-//     cur  
+//  A -> B -> C -> D -> NULL
+//  head
 
 // const printLinkedList = (head) => {
 //     let current = head
