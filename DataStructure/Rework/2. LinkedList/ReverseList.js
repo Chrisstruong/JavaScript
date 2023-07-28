@@ -5,15 +5,23 @@ class Node {
     }
   }
   
-  // Recursive Style
-  const reverseList = (head, previous = null) => {
-    if (head === null) return previous
+  //Alvin's style
+  const reverseList = (head, prev = null) => {
+    if (head === null) return prev
     const next = head.next
-    head.next = previous
-    previous = head
-    head = next
-    return reverseList(head, previous)
+    head.next = prev
+    return reverseList(next, head)
   }
+  
+  // Recursive Style
+  // const reverseList = (head, previous = null) => {
+  //   if (head === null) return previous
+  //   const next = head.next
+  //   head.next = previous
+  //   previous = head
+  //   head = next
+  //   return reverseList(head, previous)
+  // }
   
   // Iterative style
   // const reverseList = (head) => {
