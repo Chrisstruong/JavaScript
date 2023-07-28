@@ -9,11 +9,9 @@ class Node {
   const reverseList = (head) => {
     let current = head
     let previous = null
-    
     while (current !== null) {
       const next = current.next
       current.next = previous
-      console.log(previous)
       previous = current
       current = next
     }
