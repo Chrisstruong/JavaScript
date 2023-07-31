@@ -5,18 +5,30 @@ class Node {
     }
   }
   
-  //Iterative solution
-  const reverseList = (head) => {
-    let prev = null
-    let current = head
-    while (current !== null) {
-      const next = current.next
-      current.next = prev
-      prev = current
-      current = next
-    }
-    return prev
+  // Recursive style
+  // Time: O(n)
+  // Space: O(n)
+  const reverseList = (head, prev = null) => {
+    if (head === null) return prev
+    const next = head.next
+    head.next = prev
+    return reverseList(next, head)
   }
+  
+  //Iterative solution
+  // Time: O(n)
+  // Space: O(1)
+  // const reverseList = (head) => {
+  //   let prev = null
+  //   let current = head
+  //   while (current !== null) {
+  //     const next = current.next
+  //     current.next = prev
+  //     prev = current
+  //     current = next
+  //   }
+  //   return prev
+  // }
   
   // N <- a -> b -> c
   // prev cur -> next
