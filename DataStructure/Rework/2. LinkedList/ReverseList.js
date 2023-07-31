@@ -5,56 +5,21 @@ class Node {
     }
   }
   
-  //Alvin's style
-  const reverseList = (head, prev = null) => {
-    if (head === null) return prev
-    const next = head.next
-    head.next = prev
-    return reverseList(next, head)
+  //Iterative solution
+  const reverseList = (head) => {
+    let prev = null
+    let current = head
+    while (current !== null) {
+      const next = current.next
+      current.next = prev
+      prev = current
+      current = next
+    }
+    return prev
   }
   
-  // Recursive Style
-  // const reverseList = (head, previous = null) => {
-  //   if (head === null) return previous
-  //   const next = head.next
-  //   head.next = previous
-  //   previous = head
-  //   head = next
-  //   return reverseList(head, previous)
-  // }
-  
-  // Iterative style
-  // const reverseList = (head) => {
-  //   let current = head
-  //   let previous = null
-  //   while (current !== null) {
-  //     const next = current.next
-  //     current.next = previous
-  //     previous = current
-  //     current = next
-  //   }
-  //   return previous
-  // }
-  //     cur  next
-  // a ->  b-> c -> d
-  // prev
-  // const reverseList = (head) => {
-  //   // todo
-  //   // Time: O(n)
-  //   // Space: O(1)
-  //   let previous = null
-  //   let current = head
-  //   while(current !== null) {
-  //     const next = current.next
-  //     current.next = previous
-  //     prev = current 
-  //     current = next
-  //   }
-  //   return previous
-  // };
-  
-  // N  <-   a    <-     b  ->      c
-  //        prev        cur        next 
+  // N <- a -> b -> c
+  // prev cur -> next
   const a = new Node("a");
   const b = new Node("b");
   const c = new Node("c");
