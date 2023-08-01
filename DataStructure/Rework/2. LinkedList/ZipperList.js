@@ -44,6 +44,14 @@ const zipperLists = (head1, head2) => {
     
   //   return head1
   // }
+  const dataRes = {
+    success: true,
+    jobs: "Software Developer",
+    error: null,
+  };
+
+  const { success, jobs, error } = dataRes;
+  console.log(jobs)
   
   module.exports = {
     zipperLists,
