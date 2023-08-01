@@ -52,6 +52,8 @@ const zipperLists = (head1, head2) => {
 
   const { success, jobs, error } = dataRes;
   console.log(jobs)
+
+  
   
   module.exports = {
     zipperLists,
